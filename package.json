@@ -1,12 +1,12 @@
 {
   "name": "usra.tech",
   "version": "1.0.0",
-  "description": "This is a full stack application for a company to run data analytics in medical research",
+  "description": "This is a MERN full stack application for a company to run data analytics in medical research",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "start-dev":"concurrently \"node server.js\" \"cd client & npm start \"",
+    "start-dev":"concurrently \"node server.js\" \"cd client && npm start \"",
     "install": "cd client && npm install"
   },
   "repository": {
