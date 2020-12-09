@@ -11,7 +11,25 @@ const userSchema=new Schema({
         password:String
 });
 
-//Place the userSchema object inside teh user model
+
+// Bcrypting middleware
+userSchema.pre(
+    'save',
+    async function(next) {
+      const user = this;
+      const hash = await bcrypt.hash(this.password, 10);
+  
+      this.password = hash;
+      //next because its a middleware
+      next();
+    }
+  );
+  
+
+
+
+
+//Place the userSchema object inside the User model
 const User=mongoose.model("User", userSchema);
 
 module.exports=User
