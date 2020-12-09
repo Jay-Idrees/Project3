@@ -16,7 +16,7 @@ app.use(passport.initialize());
 
 // Connecting mongoose
 // Here mongodb is what we use instead of http to connect with mongoDB, then localhost indicates that we are using a local machine and mernPassport.. is the name of the database where I am storing user information
-mongoose.connect(process.env.MONGODB_URL || "mongodb://localhost/mernPassportAutherntication");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/mernPassportAutherntication");
 
 // Setting up a get request to test the server
 // the get request (Get/grab the requst from client) is from the perspective of the server- the server is getting a request to display res.json when the client types in api/welcome
