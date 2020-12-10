@@ -4,7 +4,7 @@ const passport = require("passport");
 
 // In setting up router, because we are using passport.authernticat as a middleware so we are using next
 Router.post('/login', (req, res, next)=>{
-
+console.log (req.body)
     // Because we are using the JSON web token, I am setting the session to false - the token system will take care of the session by itself
     // Note that if you look at the passport-local strategy: err, user and info are the parameters for which the arguments are in the cb function inside localStrategy. We are defining this call back in the router- so it can recieve these as arguments when passport gets this info from MongoDB 
     passport.authenticate("local", {session:false}, (err, user, info )=>{
@@ -24,10 +24,11 @@ Router.post('/login', (req, res, next)=>{
             const {email}=user;
             // And then send response in JSON format to show email and token
             // Note that the token here can be used to authenticate the react API routes
+            console.log({email,token});
             return res.json({email,token})
         }); // req.login
-    })// passport.authenticate
-    (req, res, next)
+    })(req, res, next)
+    
 });
 
 module.exports=Router;

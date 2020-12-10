@@ -16,7 +16,7 @@ const PORT=process.env.PORT || 4000;
 
 // Middleware for receiving post-requests
 
-app.use(express.urlencoded({extended:true}));
+app.use(express.urlencoded({extended: true, useNewUrlParser: true}));
 // JSON parsing for objects coming from the body and applying oriented programming in JS
 app.use (express.json());
 
