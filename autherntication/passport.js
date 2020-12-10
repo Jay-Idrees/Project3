@@ -16,14 +16,18 @@ passport.use(
 
 // I am defining the querty function for the db- telling it to match the user typed email and password and then based on the results do something (the call back function) Then I lay down what to do if the info matches vs not
 async function (email, password, cb) {
+    // Note that here the user has capital U, because thats how we spelled the User model. db is the variable thats telling to run the query on the modals and look for email and password.
    const user=await db.User.findOne({email, password});
    try {
-       // If the username/pw do not match
+      
        if (!user){
-
+ // If the email and password do not match
         return cb (null, false, {message: "Incorrect email or password"})
-         } // if the username do match
+         } // br close if
+// else if the email and password do match - note here with return, else is automatically understood
         return cb(null, user, {message:"You have logged in successfully"})
+        // If you are unable to run the query for some reason then throw error
+        // this is the closing br for try. Catch goes with try
 } catch (err) {
         cb(err)
     }
