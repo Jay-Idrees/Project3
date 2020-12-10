@@ -5,6 +5,7 @@ import logo from './logo.svg';
 import './App.css';
 // Can later move it out to api.js later
 import axios from "axios";
+import LoginForm from "./components/LoginForm"
 
 function App() {
 // Making a state as we have to update the message
@@ -44,7 +45,7 @@ const loadMessage=()=>{
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         
-          {state.message ? <p>{state.message} </p>: <p>Edit <code>src/App.js</code> and save to reload. </p>}
+          {state.apiToken ? <p>You are logged in </p>: <LoginForm />}
        
         <a
           className="App-link"
