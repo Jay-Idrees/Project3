@@ -1,4 +1,4 @@
-const mongoose=reqire("mongoose");
+const mongoose=require("mongoose");
 // Schema is a constructor function that constructs objects
 const Schema=mongoose.Schema;
 
