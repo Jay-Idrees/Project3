@@ -1,4 +1,5 @@
 const mongoose=require("mongoose");
+const bcrypt=require('bcrypt')
 // Schema is a constructor function that constructs objects
 const Schema=mongoose.Schema;
 

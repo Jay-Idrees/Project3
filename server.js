@@ -1,3 +1,8 @@
+// Post resqests are sending requsts to the server from req.body
+// get requests are receiving data from the server
+// app.use = using express package
+
+
 require('dotenv').config();
 const express= require("express");
 const app=express();
@@ -5,6 +10,7 @@ const mongoose=require("mongoose")
 // note that here I am requiring the passport from the passport file which we setup with strategies
 const passport=require("./authentication/passport");
 const authRoutes=require("./authentication/authRoutes");
+const db = require('./models');
 
 const PORT=process.env.PORT || 4000;
 
@@ -23,6 +29,11 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/mernPassportAut
 
 app.use('/auth', authRoutes) // note that authRoutes will provide the /login
 
+// A post resuest is a requests the server to accept the data enclosed in the body of the request message for storing
+app.post('/api/user', async (req, res)=>{
+    const user=await db.User.create(req.body);
+    res.json(user);
+}) // app.post
 
 // Setting up a get request to test the server
 // the get request (Get/grab the requst from client) is from the perspective of the server- the server is getting a request to display res.json when the client types in api/welcome
