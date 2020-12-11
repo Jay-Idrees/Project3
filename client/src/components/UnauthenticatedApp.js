@@ -1,15 +1,18 @@
 import React from "react";
 import LoginForm from './LoginForm'
+import Nav from "./Nav"
 
 
 function UnauthenticatedApp() {
     return (
       <div>
        
-       <p> UN-Authenticated app</p>
+    <Nav />
 
        <LoginForm />
 
+
+       <p> UN-Authenticated app</p>
 
       </div>
     );
