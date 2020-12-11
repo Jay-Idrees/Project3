@@ -1,3 +1,5 @@
+
+//In the global context we define what happens with the action
 import React, {useReducer, createContext, useContext} from "react"
 //A reducer is just a function of state in action
 const GlobalContext = createContext();
@@ -18,7 +20,8 @@ const reducer = (state, action) => {
           ...state,
           //call the email object you just got email
           email: action.email,
-          apiToken: action.token
+          apiToken: action.apiToken
+        
         }
     //   case "LOGOUT":
     //     console.log(action)

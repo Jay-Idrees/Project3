@@ -4,10 +4,10 @@ const passport = require("passport");
 
 // In setting up router, because we are using passport.authernticat as a middleware so we are using next
 Router.post('/login', (req, res, next)=>{
-console.log (req.body)
+
     // Because we are using the JSON web token, I am setting the session to false - the token system will take care of the session by itself
     // Note that if you look at the passport-local strategy: err, user and info are the parameters for which the arguments are in the cb function inside localStrategy. We are defining this call back in the router- so it can recieve these as arguments when passport gets this info from MongoDB 
-    passport.authenticate("local", {session:false}, (err, user, info )=>{
+    passport.authenticate("local", { session:false }, (err, user, info )=>{
         if (err || !user){
             // If there is an error or cant find the user then send error and user
             return res.status(404).json({message: 'Something is not working right', user:user})
