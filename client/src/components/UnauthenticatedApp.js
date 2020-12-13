@@ -1,13 +1,16 @@
 import React from "react";
 import LoginForm from './LoginForm'
-import Nav from "./Nav"
+import Headbar from "./Headbar/Headbar";
+import Jumbo from "./Jumbo/Jumbo";
 
 
 function UnauthenticatedApp() {
     return (
       <div>
        
-    <Nav />
+    <Headbar />
+
+    <Jumbo />
 
        <LoginForm />
 
