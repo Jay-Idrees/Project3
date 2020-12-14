@@ -9,16 +9,9 @@ function UnauthenticatedApp() {
       <div >
        
     <Headbar />
-
-
-
-
     <Jumbo />
 
-       <LoginForm />
-
-
-       <p> UN-Authenticated app</p>
+       {/* <LoginForm /> */}
 
       </div>
     );
