@@ -12,18 +12,26 @@ function Proposal(){
 
 <Container>
   <Row>
-    <Col sm={8}>sm=8
-
-
-
-
-
+    <Col sm={8}>
             <Form>
+
             <Form.Group controlId="exampleForm.ControlInput1">
-              <Form.Label>Email address</Form.Label>
-              <Form.Control type="email" placeholder="name@example.com" />
+              <Form.Label>Project Title</Form.Label>
+              <Form.Control type="input" placeholder="" />
             </Form.Group>
-            <Form.Group controlId="exampleForm.ControlSelect1">
+
+            <Form.Group controlId="exampleForm.ControlTextarea1">
+              <Form.Label>Please share some context and background for your proposed research</Form.Label>
+              <Form.Control as="textarea" rows={3} />
+            </Form.Group>
+
+
+            <Form.Group controlId="exampleForm.ControlInput1">
+              <Form.Label>Please define your Research Question</Form.Label>
+              <Form.Control type="input" placeholder="" />
+            </Form.Group>
+
+            {/* <Form.Group controlId="exampleForm.ControlSelect1">
               <Form.Label>Example select</Form.Label>
               <Form.Control as="select">
                 <option>1</option>
@@ -32,9 +40,10 @@ function Proposal(){
                 <option>4</option>
                 <option>5</option>
               </Form.Control>
-            </Form.Group>
+            </Form.Group> */}
+
             <Form.Group controlId="exampleForm.ControlSelect2">
-              <Form.Label>Example multiple select</Form.Label>
+              <Form.Label>References</Form.Label>
               <Form.Control as="select" multiple>
                 <option>1</option>
                 <option>2</option>
@@ -43,6 +52,7 @@ function Proposal(){
                 <option>5</option>
               </Form.Control>
             </Form.Group>
+
             <Form.Group controlId="exampleForm.ControlTextarea1">
               <Form.Label>Example textarea</Form.Label>
               <Form.Control as="textarea" rows={3} />
