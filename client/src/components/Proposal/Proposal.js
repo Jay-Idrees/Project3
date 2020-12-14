@@ -48,6 +48,14 @@ function Proposal(){
               <Form.Control as="textarea" rows={3} />
             </Form.Group>
 
+
+    
+  <Form.File 
+    id="custom-file"
+    label="Please upload your data"
+    custom
+  />
+
             <Button variant="primary" type="submit">
     Submit
   </Button>
