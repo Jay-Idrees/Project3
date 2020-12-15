@@ -7,6 +7,7 @@ require('dotenv').config();
 const express= require("express");
 const mongoose=require("mongoose")
 const app=express();
+const path = require('path');
 
 // note that here I am requiring the passport from the passport file which we setup with strategies
 const passport=require("./authentication/passport");
