@@ -53,7 +53,12 @@ app.get("/api/welcome", (req, res)=>{
 
 
 
-
+if (process.env.NODE_ENV === 'production') {    
+    // serve static files    
+    app.use(express.static(path.join(__dirname, 'client/build')));
+    // handle React routing    
+    app.get('*', function (req, res) {        res.sendFile(path.join(__dirname, 'client/build', 'index.html'));    });
+}
 
 app.listen (PORT, ()=>{
     console.log(`Welcome to USRA.tech, your server is running at https://localhost:${PORT}`)
