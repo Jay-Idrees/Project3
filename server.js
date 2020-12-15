@@ -26,7 +26,14 @@ app.use (express.json());
 
 // Connecting mongoose
 // Here mongodb is what we use instead of http to connect with mongoDB, then localhost indicates that we are using a local machine and mernPassport.. is the name of the database where I am storing user information
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/mernPassportAuthentication");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/mernPassportAuthentication",
+{
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false
+  }
+);
 
 app.use('/auth', authRoutes) // note that authRoutes will provide the /login
 
