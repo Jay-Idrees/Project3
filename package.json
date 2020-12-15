@@ -4,6 +4,7 @@
   "description": "This is a MERN full stack application for a company to run data analytics in medical research",
   "main": "server.js",
   "scripts": {
+    "build": "cd client && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "start-dev": "concurrently \"node server.js\" \"cd client && npm start \"",
