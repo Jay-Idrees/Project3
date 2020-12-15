@@ -9,7 +9,7 @@ function UnauthenticatedApp() {
       <div >
        
     <Headbar />
-    <Jumbo />
+    {/* <Jumbo /> */}
 
        {/* <LoginForm /> */}
 

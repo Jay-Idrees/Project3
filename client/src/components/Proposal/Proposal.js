@@ -63,7 +63,7 @@ function Proposal(){
           </Form>
           </Col>
         
-          <Col sm={4}>sm=4</Col>
+       
   </Row>
   </Container>
           ) 

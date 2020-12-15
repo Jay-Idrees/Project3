@@ -7,7 +7,7 @@ function AuthenticatedApp() {
       <div>
       <Headbar />
        <Proposal/>
-       <p> Authenticated app</p>
+     
       </div>
     );
   }

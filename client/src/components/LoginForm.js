@@ -20,7 +20,7 @@ const LoginForm=()=>{
             email:emailRef.current.value,
             password:passwordRef.current.value
         }
-        console.log(creds)
+        // console.log(creds)
         // Verify and log the user in
         // Of every thing you received back from the axios post request, destructure data
         // Note that as the email and password are captured, the JWT package will add token to it
@@ -54,7 +54,7 @@ const LoginForm=()=>{
                     <Form.Control type="password" placeholder="Password"  ref={passwordRef} />
                 </Form.Group>
                 <Form.Group controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Check me out" />
+                    <Form.Check type="checkbox" label="Keep my longin information" />
                 </Form.Group>
                 <Button variant="primary" type="submit">
                     Submit

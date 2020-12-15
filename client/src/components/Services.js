@@ -1,11 +1,12 @@
 import React from "react";
 import Headbar from "./Headbar/Headbar";
+import { Row, Col, Container} from 'react-bootstrap'
+
 
 function Services(){
     return(
      
 <Container>
-<Headbar />
   <Row>
     <Col sm={8}>
        <p>
@@ -17,7 +18,6 @@ function Services(){
 
        </Col>
      
-          <Col sm={4}>sm=4</Col>
   </Row>
   </Container>
 
