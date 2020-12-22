@@ -55,7 +55,7 @@ function Proposal(){
     label="Please upload your data"
     custom
   />
-
+{/* Button */}
             <Button variant="primary" type="submit">
     Submit
   </Button>
